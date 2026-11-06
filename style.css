@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 1000;
+
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+
+  border-bottom: 1px solid black;
+}
+.username{
+  font-size: large;
+  font: bold;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login_btn{
+  width: 100px;
+  border: none;
+  border-radius: 30px;
+  padding: 5px 30px;
+  background-color: rgb(196, 229, 239);
+  color: rgb(6, 6, 148);
+}
+
+.search_section{
+  padding: 20px;
+  margin: 70px auto;
+  height: 60px;
+  position: fixed;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+}
+.search_section input{
+  margin-right: 20px;
+  padding-left: 10px;
+  height: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 15px;
+
+  outline: none;
+  border: 0.5px solid grey;
+  background-color: rgb(232, 228, 228);
+}
+.search_section button{
+  height: 40px;
+  width: 70px;
+  border-radius: 15px;
+  color: white;
+  background-color: blueviolet;
+
+  outline: none;
+  border: 0.5px solid grey;
+}
+
+.student_data{
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.student-card{
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(198, 195, 195);
+  height: auto;
+  width: 200px;
+  border-radius: 10px;
+}
+.student-card h2,p{
+  padding: 5px;
+  margin: 5px;
+}
