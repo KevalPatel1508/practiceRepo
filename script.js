@@ -22,19 +22,57 @@ const students = [
 ]
 
 const container = document.getElementById("student_data");
+const searchInput = document.getElementById("searchInput");
 
-students.forEach((student) => {
-  const card = document.createElement("div");
-  card.classList.add("student-card");
-
-  card.innerHTML = `
+function displayStudents(data){
+  container.innerHTML = "";
+  const cards = data.map((student) =>{
+    return `
+      <div class="student-card">
         <h2>Name:${student.name}</h2>
         <p><strong>Marks:</strong> ${student.marks}</p>
         <p><strong>Class:</strong> ${student.class}</p>
-        <p>Address: ${student.address}</p>
+        <p><strong>Address:</strong> ${student.address}</p>
+      </div>
     `;
+  });
 
-    // Add card to HTML container
-    container.appendChild(card);
+  if(data.length === 0){
+    container.innerHTML = "<h2>No Student Found!</h2>"
+  }
+  else{
+    container.innerHTML = cards.join("");
+  }
+}
 
-})
+//display all student initially
+displayStudents(students);
+
+// students.forEach((student) => {
+//   const card = document.createElement("div");
+//   card.classList.add("student-card");
+
+//   card.innerHTML = `
+//         <h2>Name:${student.name}</h2>
+//         <p><strong>Marks:</strong> ${student.marks}</p>
+//         <p><strong>Class:</strong> ${student.class}</p>
+//         <p><strong>Address:</strong> ${student.address}</p>
+//     `;
+
+//     // Add card to HTML container
+//     container.appendChild(card);
+
+// })
+
+function searchStudents() {
+    const searchValue = searchInput.value.toLowerCase().trim();
+
+    const filteredStudents = students.filter((student) => {
+        return student.name.toLowerCase().includes(searchValue);
+    });
+
+    displayStudents(filteredStudents);
+}
+
+searchInput.addEventListener("input", searchStudents);
+document.querySelector(".search_btn").addEventListener("click", searchStudents);

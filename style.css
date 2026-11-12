@@ -43,7 +43,7 @@
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid black;
+  border: 0.3px solid grey;
   border-radius: 15px;
   background-color: white;
 
@@ -60,8 +60,9 @@
   border-radius: 15px;
 
   outline: none;
-  border: 0.5px solid grey;
-  background-color: rgb(232, 228, 228);
+  /* border: 0.5px solid grey; */
+  border: none;
+  background-color: rgb(243, 241, 241);
 }
 .search_section button{
   height: 40px;
@@ -71,7 +72,7 @@
   background-color: blueviolet;
 
   outline: none;
-  border: 0.5px solid grey;
+  border: none;
 }
 
 .student_data{
@@ -84,9 +85,9 @@
 .student-card{
   margin: 20px;
   padding: 10px;
-  background-color: rgb(198, 195, 195);
+  background-color: rgb(243, 241, 241);
   height: auto;
-  width: 200px;
+  width: 250px;
   border-radius: 10px;
 }
 .student-card h2,p{
